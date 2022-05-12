@@ -12,8 +12,8 @@ model = tmd
 model.compile("adam", "sparse_categorical_crossentropy", metrics=["accuracy"])
 
 #Load data
+#(x_train, y_train), (x_test, y_test) = tf.keras.datasets.cifar10.load_data()
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.cifar10.load_data()
-
 
 # Define Flower client
 class TMDClient(fl.client.NumPyClient):
