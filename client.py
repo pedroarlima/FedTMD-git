@@ -8,7 +8,7 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
 # Load model
 #model = tf.keras.applications.MobileNetV2((32, 32, 3), classes=10, weights=None)
-model = tmd
+model = tf.keras.applications.MobileNetV2((32, 32, 3), classes=10, weights=None)
 model.compile("adam", "sparse_categorical_crossentropy", metrics=["accuracy"])
 
 #Load data
