@@ -1288,13 +1288,13 @@ if __name__ == "__main__":
     if not os.path.exists(rawOriginaldata):
         os.makedirs(rawOriginaldata)
 
-    print "DOWNLOAD........"
+    print("DOWNLOAD........")
     for url in url_list:
         response = urllib2.urlopen(url)
         csv = response.read()
-        if url == 'http://cs.unibo.it/projects/us-tm2017/static/dataset/extension/5second/dataset_5secondWindow.csv':
+        if url=='http://cs.unibo.it/projects/us-tm2017/static/dataset/extension/5second/dataset_5secondWindow.csv':
             outfile = datasetBalanced + '/' +dataset5second
-	elif url == 'http://cs.unibo.it/projects/us-tm2017/static/dataset/raw_data/raw_data.tar.gz':
+           elif url=='http://cs.unibo.it/projects/us-tm2017/static/dataset/raw_data/raw_data.tar.gz':
 	    outfile = rawOriginaldata + '/' + rawdataorig
         else:
             outfile = datasetBalanced + '/' + datasethalfsecond
